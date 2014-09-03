@@ -1,0 +1,58 @@
+<%= form_for(@manager) do |f| %>
+  <% if @manager.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@manager.errors.count, "error") %> prohibited this manager from being saved:</h2>
+
+      <ul>
+      <% @manager.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+      <%= f.label :username %>
+      <br>
+      <%= f.text_field :username %>
+    </div>
+    <div class="field">
+      <%= f.label :realname %>
+      <br>
+      <%= f.text_field :realname %>
+    </div>
+    <div class="field">
+      <%= f.label :password %>
+      <br>
+      <%= f.text_field :password %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %>
+      <br>
+      <%= f.text_field :password_confirmation %>
+    </div>
+    <div class="field">
+      <%= f.label :telphone %>
+      <br>
+      <%= f.text_field :telphone %>
+    </div>
+    <div class="field">
+      <%= f.label :mobile %>
+      <br>
+      <%= f.text_field :mobile %>
+    </div>
+    <div class="field">
+      <%= f.label :email %>
+      <br>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :construction %>
+      <br>
+      <%= f.text_field :construction %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
