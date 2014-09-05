@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://ruby.taobao.org/
   specs:
     actionmailer (4.0.4)
       actionpack (= 4.0.4)
@@ -29,10 +29,6 @@ GEM
     bcrypt (3.1.7)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
-    bootstrap-sass (3.2.0.1)
-      sass (~> 3.2)
-    bootstrap-will_paginate (0.0.9)
-      will_paginate
     builder (3.1.4)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
@@ -87,6 +83,9 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.4)
       sprockets-rails (~> 2.0.0)
+    rails-i18n (4.0.3)
+      i18n (~> 0.6)
+      railties (~> 4.0)
     railties (4.0.4)
       actionpack (= 4.0.4)
       activesupport (= 4.0.4)
@@ -144,12 +143,20 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (2.3.0)
       coffee-rails
+    twitter-bootstrap-rails (2.2.8)
+      actionpack (>= 3.1)
+      execjs
+      rails (>= 3.1)
+      railties (>= 3.1)
     tzinfo (0.3.41)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    uuidtools (2.1.4)
-    will_paginate (3.0.4)
+    uuidtools (2.1.5)
+    will-paginate-i18n (0.1.15)
+    will_paginate (3.0.7)
+    will_paginate-bootstrap (1.0.1)
+      will_paginate (>= 3.0.3)
     yard (0.8.7.4)
 
 PLATFORMS
@@ -157,8 +164,6 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby
-  bootstrap-sass (= 3.2.0.1)
-  bootstrap-will_paginate (= 0.0.9)
   carrierwave
   coffee-rails (~> 4.0.0)
   easy_captcha (~> 0.6.4)
@@ -167,10 +172,14 @@ DEPENDENCIES
   mini_magick
   mysql2
   rails (= 4.0.4)
+  rails-i18n (~> 4.0.1)
   rmagick (~> 2.13.3)
   sass-rails (~> 4.0.2)
   sdoc
   turbolinks
+  twitter-bootstrap-rails (~> 2.2.8)
   uglifier (>= 1.3.0)
   uuidtools
-  will_paginate (= 3.0.4)
+  will-paginate-i18n (~> 0.1.15)
+  will_paginate (~> 3.0.7)
+  will_paginate-bootstrap (~> 1.0.1)

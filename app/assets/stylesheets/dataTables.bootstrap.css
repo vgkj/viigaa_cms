@@ -55,12 +55,12 @@ table.dataTable thead .sorting_desc_disabled {
 	cursor: pointer;
 }
 
-table.dataTable thead .sorting { background: url('../images/datatables/sort_both.png') no-repeat center right; }
-table.dataTable thead .sorting_asc { background: url('../images/datatables/sort_asc.png') no-repeat center right; }
-table.dataTable thead .sorting_desc { background: url('../images/datatables/sort_desc.png') no-repeat center right; }
+table.dataTable thead .sorting { background: url('/assets/datatables/sort_both.png') no-repeat center right; }
+table.dataTable thead .sorting_asc { background: url('/assets/datatables/sort_asc.png') no-repeat center right; }
+table.dataTable thead .sorting_desc { background: url('/assets/datatables/sort_desc.png') no-repeat center right; }
 
-table.dataTable thead .sorting_asc_disabled { background: url('../images/datatables/sort_asc_disabled.png') no-repeat center right; }
-table.dataTable thead .sorting_desc_disabled { background: url('../images/datatables/sort_desc_disabled.png') no-repeat center right; }
+table.dataTable thead .sorting_asc_disabled { background: url('/assets/datatables/sort_asc_disabled.png') no-repeat center right; }
+table.dataTable thead .sorting_desc_disabled { background: url('/assets/datatables/sort_desc_disabled.png') no-repeat center right; }
 
 table.dataTable th:active {
 	outline: none;
@@ -155,7 +155,7 @@ div.DTTT_collection_background {
 	z-index: 2002;	
 }
 
-/* TableTools information display */
+/* TableTools informations display */
 div.DTTT_print_info.modal {
 	height: 150px;
 	margin-top: -75px;

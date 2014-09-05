@@ -18,7 +18,11 @@ class UsersControllerTest < ActionController::TestCase
 
   test "should create user" do
     assert_difference('User.count') do
+<<<<<<< HEAD
       post :create, user: {  }
+=======
+      post :create, user: { account: @user.account, age: @user.age, birthday: @user.birthday, errorTime: @user.errorTime, flow: @user.flow, gender: @user.gender, integral: @user.integral, login_at: @user.login_at, nickname: @user.nickname, password_digest: @user.password_digest, photo: @user.photo, qq: @user.qq, renren: @user.renren, signature,: @user.signature,, userid: @user.userid, weiblog: @user.weiblog, weixin: @user.weixin }
+>>>>>>> userinfo
     end
 
     assert_redirected_to user_path(assigns(:user))
@@ -35,7 +39,11 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should update user" do
+<<<<<<< HEAD
     patch :update, id: @user, user: {  }
+=======
+    patch :update, id: @user, user: { account: @user.account, age: @user.age, birthday: @user.birthday, errorTime: @user.errorTime, flow: @user.flow, gender: @user.gender, integral: @user.integral, login_at: @user.login_at, nickname: @user.nickname, password_digest: @user.password_digest, photo: @user.photo, qq: @user.qq, renren: @user.renren, signature,: @user.signature,, userid: @user.userid, weiblog: @user.weiblog, weixin: @user.weixin }
+>>>>>>> userinfo
     assert_redirected_to user_path(assigns(:user))
   end
 

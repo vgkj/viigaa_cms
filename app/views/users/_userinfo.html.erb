@@ -1,0 +1,119 @@
+<div class="modal fade" id="userinfo-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"><i class="fa fa-envelope-o"></i> 用户信息修改</h4>
+      </div>
+      <form id="userinfo" data-remote="true" method="post">
+        <input type="hidden" id="id" name="id">
+        <div class="modal-body v-body">
+          <div class="form-group v-form-group">
+            <div class="input-group">
+              <span class="input-group-addon">手机</span>
+              <input name="account" type="" class="form-control" placeholder="请输入手机号" id="account">
+            </div>
+          </div>
+          <div class="form-group v-form-group">
+            <div class="input-group">
+              <span class="input-group-addon">昵称</span>
+              <input name="nickname" type="" class="form-control" placeholder="请输入昵称" id="nickname">
+            </div>
+          </div>
+          <div class="form-group v-form-group">
+            <div class="input-group">
+              <span class="input-group-addon">QQ</span>
+              <input name="qq" type="" class="form-control" placeholder="请输入QQ号码" id="qq">
+            </div>
+          </div>
+          <div class="form-group v-form-group">
+            <div class="input-group">
+              <span class="input-group-addon">微信</span>
+              <input name="weixin" type="" class="form-control" placeholder="请输入微信号" id="weixin">
+            </div>
+          </div>
+          <div class="form-group v-form-group">
+            <div class="input-group">
+              <span class="input-group-addon">微博</span>
+              <input name="weiblog" type="" class="form-control" placeholder="请输入微博地址" id="weiblog">
+            </div>
+          </div>
+          <div class="form-group v-form-group">
+            <div class="input-group">
+              <span class="input-group-addon">人人网</span>
+              <input name="renren" type="" class="form-control" placeholder="请输入人人网" id="renren">
+            </div>
+          </div>
+          <div class="form-group v-form-group">
+            <div class="input-group">
+              <span class="input-group-addon">可用流量</span>
+              <input name="flow" type="" class="form-control" placeholder="请输入可用流量" id="flow">
+            </div>
+          </div>
+          <div class="form-group v-form-group">
+            <div class="input-group">
+              <span class="input-group-addon">可用积分</span>
+              <input name="integral" type="" class="form-control" placeholder="请输入可用积分" id="integral">
+            </div>
+          </div>
+          <div class="form-group v-form-group">
+            <div class="input-group">
+              <span class="input-group-addon">性别</span>
+
+              <select id="usersex" class="form-control">
+                <option value="0">男</option>
+                <option value="1">女</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group v-form-group">
+            <div class="input-group"  style="height: 34px">
+              <span class="input-group-addon">生日</span>
+              <div id="datetimepicker" class="controls input-append date">
+                <input type="" style="width:84%; height: 34px;" disabled>
+                </input>
+              		<span class="add-on v-add-on" style=""> 
+                    </span> </div>
+            </div>
+          </div>
+          <div class="form-group v-form-group">
+            <div class="input-group">
+              <span class="input-group-addon">年龄</span>
+              <input name="age" type="" class="form-control" placeholder="请输入年龄" id="age">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer clearfix">
+
+          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> 取消
+          </button>
+
+          <button type="button" class="btn btn-primary pull-left" onclick="updateUser()"><i class="fa fa-envelope"></i> 保存</button>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<script type="text/javascript">
+    $(function(){
+        removeSection = function(e) {
+            $(e).parents(".section").remove();
+            $('[data-spy="scroll"]').each(function () {
+                var $spy = $(this).scrollspy('refresh')
+            });
+        }
+        $("#myform").scrollspy();
+    });
+    $('#datetimepicker').datetimepicker({
+        format: 'yyyy/MM/dd hh:mm',
+        language: 'en',
+        pickDate: true,
+        pickTime: true,
+        hourStep: 1,
+        minuteStep: 15,
+        secondStep: 30,
+        inputMask: true
+    });
+</script>

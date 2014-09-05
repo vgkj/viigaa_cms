@@ -1,71 +1,65 @@
-<div class="wrapper row-offcanvas row-offcanvas-left">
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="left-side sidebar-offcanvas">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <%=  image_tag("avatar5.png", class: "img-circle" , alt: "User Image") %>
-        </div>
-        <div class="pull-left info">
-          <p>Hello, admin</p>
+<aside class="left-side sidebar-offcanvas" style="min-height:900px;">
+  <div class="user-panel">
+    <div class="pull-left image">
+      <img class="img-circle" src="/assets/peseron.jpg" alt="User Image">
+    </div>
+    <div class="pull-left info">
+      <p>Hello, Jane</p>
+    </div>
+  </div>
 
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion"
+             href="#collapseOne">
+            用户管理<i style="float:right;"><img src="/assets/date.png"></i>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <p><a href="/users">普通用户</a><i style="float:right;"><img src="/assets/date.png"></i></p>
+          <p><a href="/managers">系统用户</a><i style="float:right;"><img src="/assets/date.png"></i></p>
         </div>
       </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion"
+             href="#collapseTwo">
+            选项二
+          </a><i style="float:right;"><img src="/assets/date.png"></i>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p><a href="#">选项2-1</a><i style="float:right;"><img src="/assets/date.png"></i></p>
+          <p><a href="#">选项2-2</a><i style="float:right;"><img src="/assets/date.png"></i></p>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion"
+             href="#collapseThree">
+            选项三
+          </a><i style="float:right;"><img src="/assets/date.png"></i>
+        </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p><a href="#">选项3-1</a><i style="float:right;"><img src="/assets/date.png"></i></p>
+          <p><a href="#">选项3-2</a><i style="float:right;"><img src="/assets/date.png"></i></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu">
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-folder"></i> <span>用户管理</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href=""><i class="fa fa-angle-double-right"></i> 用户管理</a></li>
-            <li><a href="/managers"><i class="fa fa-angle-double-right"></i> 系统用户管理</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>内容管理</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-          <ul class="treeview-menu">
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-edit"></i> <span>资讯</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href=""><i class="fa fa-angle-double-right"></i> ▬▬轮播</a></li>
-                <li><a href=""><i class="fa fa-angle-double-right"></i> ▬▬编辑</a></li>
-              </ul>
-            </li>
-            <li><a href=""><i class="fa fa-angle-double-right"></i> 公开课</a></li>
-            <li><a href="/app_lists"><i class="fa fa-angle-double-right"></i> App汇</a></li>
-            <li><a href=""><i class="fa fa-angle-double-right"></i> 网站导航</a></li>
-          </ul>
-        </li>
 
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-folder"></i> <span>消息推送</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href=""><i class="fa fa-angle-double-right"></i> 系统推送</a></li>
-            <li><a href=""><i class="fa fa-angle-double-right"></i> 人工推送</a></li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Right side column. Contains the navbar and content of the page -->
-  <aside class="right-side">
-
-  </aside><!-- /.right-side -->
-</div>
+</aside>
+<aside class="right-side">
+</aside>

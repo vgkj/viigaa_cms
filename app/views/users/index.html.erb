@@ -1,25 +1,180 @@
-<h1>Listing users</h1>
+<aside class="right-side">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">用户列表</h3>
+        </div>
+        <div class="box-body table-responsive">
+          <%= form_tag users_path, class: "form-inline form-search", method: :get do %>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon">手机号</div>
+                  <%= text_field_tag :search_account, @search_account, class: "form-control", placeholder: "请输入要搜索的手机号" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon">昵称</div>
+                  <%= text_field_tag :search_nickname, @search_nickname, class: "form-control", placeholder: "请输入要搜索的昵称" %>
+                </div>
+              </div>
+              <button type="submit" class="btn">搜索</button>
+          <% end %>
+          <table id="example1" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+              <th>手机号</th>
+              <th>昵称</th>
+              <th>性别</th>
+              <th>注册日期</th>
+              <th>最后登录时间</th>
+              <th>最后修改时间</th>
+              <th>登录总时长</th>
+              <th>当前状态</th>
+              <th>总积分</th>
+              <th>总积分</th>
+              <th>管理操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @users.each do |user| %>
+                <tr id="<%= user.userid%>">
+                  <td><%= user.account %></td>
+                  <td><%= user.nickname %></td>
+                  <td><%= gender_tag user.gender%></td>
+                  <td><%= user.created_at.to_s(:db) %></td>
+                  <td><%= user.login_at.to_s(:db) %></td>
+                  <td><%= user.updated_at.to_s(:db) %></td>
+                  <td><%= %></td>
+                  <td>
+                    <%= status_tag user.status %>
+                  </td>
+                  <td><%= user.integral || 0 %></td>
+                  <td><%= user.flow || 0 %></td>
+                  <td class="operation">
+                    <%= link_to '详情', user, class: "btn btn-default" %>
+                    <%= link_to '删除', user, method: :delete, data: {confirm: '确认该用户数据？'} ,class: "btn btn-default"%>
+                    <!--<a class="btn btn-default" onclick="deleteUser('<%= user.userid%>')">删除</a>-->
+                    <a class="btn btn-default" data-toggle="modal" data-target="#userinfo-modal" onclick="getUser('<%= user.userid%>')">修改</a>
+                    <% if user.status=='1' || user.status=='2' %>
+                        <a class="btn btn-default" onclick="getUser('<%= user.userid%>',<%= user.status%>)"><%= '禁用' %></a>
+                    <% else %>
+                        <a href="#" class="btn btn-default"><%= '启用' %></a>
+                    <% end %>
+                  </td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <div class="page_info">
+            <div class="page_info_content">
+              <%= page_entries_info @users %>
+            </div>
+            <div class="page_info_content">
+              <%= will_paginate(@users, :class => 'pagination', search_account: @search_account, search_nickname: @search_nickname, :renderer => 'BootstrapPagination::Rails') %>
+            </div>
+          </div>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+  </div>
+  <%= render 'userinfo' %>
+  </div>
+  <script>
+      $(function () {
+          $("#example1").dataTable({
+              "bPaginate": false, //关闭翻页功能
+              "bLengthChange": false, //改变每页显示数据数量
+              "bFilter": false, //关闭过滤功能
+              "bSort": true, //排序功能
+              "aoColumns": [
+                  { "asSorting": [ "desc", "asc", "asc" ] },
+                  { "asSorting": [ "desc", "asc", "asc" ] },
+                  { "asSorting": [ "desc", "asc", "asc" ] },
+                  { "asSorting": [ "desc", "asc", "asc" ] },
+                  { "asSorting": [ "desc", "asc", "asc" ] },
+                  { "asSorting": [ "desc", "asc", "asc" ] },
+                  { "asSorting": [ "desc", "asc", "asc" ] },
+                  { "asSorting": [ "desc", "asc", "asc" ] },
+                  { "asSorting": [ "desc", "asc", "asc" ] },
+                  { "asSorting": [ "desc", "asc", "asc" ] },
+                  { "asSorting": [ ] }
+              ],
+              "bInfo": false,//页脚信息
+              "bAutoWidth": true,//自动宽度
+              "oLanguage": {
+                  "sLengthMenu": "每页显示 _MENU_ 条记录",
+                  "sZeroRecords": "抱歉， 没有找到相关数据",
+                  "sInfo": "显示 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+                  "sInfoEmpty": "没有数据",
+                  "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+                  "oPaginate": {
+                      "sFirst": "首页",
+                      "sPrevious": "上一页",
+                      "sNext": "下一页",
+                      "sLast": "尾页"
+                  },
+                  "sZeroRecords": "没有检索到数据",
+                  "sProcessing": "<img src='./loading.gif' />"
+              }
+          });
+      });
+      function getUser(id) {
+          $.ajax({
+              type: "get",
+              url: "/users/getOneUser",
+              data: {id: id},
+              dataType: "json",
+              success: function (data) {
+                  $("#id").val(data["userid"]);
+                  $("#nickname").val(data["nickname"]);
+                  $("#account").val(data["account"]);
+                  $("#qq").val(data["qq"]);
+                  $("#weixin").val(data["weixin"]);
+                  $("#weiblog").val(data["weiblog"]);
+                  $("#renren").val(data["renren"]);
+                  $("#flow").val(data["flow"]);
+                  $("#integral").val(data["integral"]);
+                  $("#gender").val(data["gender"]);
+                  $("#birthday").val(data["birthday"]);
+                  $("#age").val(data["age"]);
+                  $("flow").val(data["flow"]);
+              },
+              error: function (data) {
+                  alert("fuck")
+              }
+          });
+      }
+      function updateUser(){
+          var url="/users/updateOneUser"
+          $.post(url, $("#userinfo").serialize(), function (data) {
+              if(data){
+                  if(confirm(data["message"] + ",是否返回首页？")){
+                      $('#compose-modal').modal('toggle');
+                      window.location.href =  window.location.href;
+                  }
+              }
+          });
+      }
+      /*
+      function deleteUser(id){
+          $.ajax({
+              type: "patch",
+              url: "/users/deleteOneUser",
+              data: {id: id},
+              dataType: "json",
+              success: function (data) {
+                  alert(data["message"]);
+                  window.location.href =  window.location.href;
+              }
+          });
+      }*/
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+      function changeStatus(id,status){
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
+      }
+  </script>
+</aside>

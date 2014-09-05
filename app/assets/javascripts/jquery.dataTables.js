@@ -468,7 +468,7 @@
 				aDataSupplied.slice() :
 				$.extend( true, {}, aDataSupplied );
 			
-			/* Create the object for storing information about this new row */
+			/* Create the object for storing informations about this new row */
 			var iRow = oSettings.aoData.length;
 			var oData = $.extend( true, {}, DataTable.models.oRow );
 			oData._aData = aDataIn;
@@ -514,7 +514,7 @@
 			/* Add to the display array */
 			oSettings.aiDisplayMaster.push( iRow );
 		
-			/* Create the DOM information */
+			/* Create the DOM informations */
 			if ( !oSettings.oFeatures.bDeferRender )
 			{
 				_fnCreateTr( oSettings, iRow );
@@ -1821,7 +1821,7 @@
 						/* Cache calculation for unique columns */
 						bUnique = iColspan === 1 ? true : false;
 						
-						/* If there is col / rowspan, copy the information into the layout grid */
+						/* If there is col / rowspan, copy the informations into the layout grid */
 						for ( l=0 ; l<iColspan ; l++ )
 						{
 							for ( k=0 ; k<iRowspan ; k++ )
@@ -2136,7 +2136,7 @@
 		/**
 		 * Filter the table using both the global filter and column based filtering
 		 *  @param {object} oSettings dataTables settings object
-		 *  @param {object} oSearch search information
+		 *  @param {object} oSearch search informations
 		 *  @param {int} [iForce] force a research of the master array (1) or not (undefined or 0)
 		 *  @memberof DataTable#oApi
 		 */
@@ -2478,7 +2478,7 @@
 				/* Add draw callback */
 				oSettings.aoDrawCallback.push( {
 					"fn": _fnUpdateInfo,
-					"sName": "information"
+					"sName": "informations"
 				} );
 				
 				/* Add id */
@@ -2491,13 +2491,13 @@
 		
 		
 		/**
-		 * Update the information elements in the display
+		 * Update the informations elements in the display
 		 *  @param {object} oSettings dataTables settings object
 		 *  @memberof DataTable#oApi
 		 */
 		function _fnUpdateInfo ( oSettings )
 		{
-			/* Show information about the table */
+			/* Show informations about the table */
 			if ( !oSettings.oFeatures.bInfo || oSettings.aanFeatures.i.length === 0 )
 			{
 				return;
@@ -5284,7 +5284,7 @@
 		 *    $(document).ready(function() {
 		 *      var oTable;
 		 *      
-		 *      // 'open' an information row when a row is clicked on
+		 *      // 'open' an informations row when a row is clicked on
 		 *      $('#example tbody tr').click( function () {
 		 *        if ( oTable.fnIsOpen(this) ) {
 		 *          oTable.fnClose( this );
@@ -5803,7 +5803,7 @@
 		 *    $(document).ready(function() {
 		 *      var oTable;
 		 *      
-		 *      // 'open' an information row when a row is clicked on
+		 *      // 'open' an informations row when a row is clicked on
 		 *      $('#example tbody tr').click( function () {
 		 *        if ( oTable.fnIsOpen(this) ) {
 		 *          oTable.fnClose( this );
@@ -5848,7 +5848,7 @@
 		 *    $(document).ready(function() {
 		 *      var oTable;
 		 *      
-		 *      // 'open' an information row when a row is clicked on
+		 *      // 'open' an informations row when a row is clicked on
 		 *      $('#example tbody tr').click( function () {
 		 *        if ( oTable.fnIsOpen(this) ) {
 		 *          oTable.fnClose( this );
@@ -7029,7 +7029,7 @@
 		 *  @deprecated
 		 *
 		 *  @example
-		 *    // Updating the cached sorting information with user entered values in HTML input elements
+		 *    // Updating the cached sorting informations with user entered values in HTML input elements
 		 *    jQuery.fn.dataTableExt.afnSortData['dom-text'] = function ( oSettings, iColumn )
 		 *    {
 		 *      var aData = [];
@@ -7444,7 +7444,7 @@
 	
 	
 		/**
-		 * Store information for DataTables to access globally about other instances
+		 * Store informations for DataTables to access globally about other instances
 		 *  @namespace
 		 *  @private
 		 */
@@ -7458,8 +7458,8 @@
 	
 	
 	/**
-	 * Template object for the way in which DataTables holds information about
-	 * search information for the global filter and individual column filters.
+	 * Template object for the way in which DataTables holds informations about
+	 * search informations for the global filter and individual column filters.
 	 *  @namespace
 	 */
 	DataTable.models.oSearch = {
@@ -7498,7 +7498,7 @@
 	
 	
 	/**
-	 * Template object for the way in which DataTables holds information about
+	 * Template object for the way in which DataTables holds informations about
 	 * each individual row. This is the object format used for the settings 
 	 * aoData array.
 	 *  @namespace
@@ -7562,8 +7562,8 @@
 	
 	
 	/**
-	 * Template object for the column information object in DataTables. This object
-	 * is held in the settings aoColumns array and contains all the information that
+	 * Template object for the column informations object in DataTables. This object
+	 * is held in the settings aoColumns array and contains all the informations that
 	 * DataTables needs about each individual column.
 	 * 
 	 * Note that this object is related to {@link DataTable.defaults.columns} 
@@ -8134,8 +8134,8 @@
 	
 	
 		/**
-		 * Enable or disable the table information display. This shows information 
-		 * about the data that is currently visible on the page, including information
+		 * Enable or disable the table informations display. This shows informations
+		 * about the data that is currently visible on the page, including informations
 		 * about filtered data if that action is being performed.
 		 *  @type boolean
 		 *  @default true
@@ -8398,7 +8398,7 @@
 	
 		/**
 		 * Enable or disable state saving. When enabled a cookie will be used to save
-		 * table display information such as pagination information, display length,
+		 * table display informations such as pagination informations, display length,
 		 * filtering and sorting. As such when the end user reloads the page the
 		 * display display will match what thy had previously set up.
 		 *  @type boolean
@@ -8515,7 +8515,7 @@
 	
 	
 		/**
-		 * When rendering large numbers in the information element for the table
+		 * When rendering large numbers in the informations element for the table
 		 * (i.e. "Showing 1 to 10 of 57 entries") DataTables will render large numbers
 		 * to have a comma separator for the 'thousands' units (e.g. 1 million is
 		 * rendered as "1,000,000") to help readability for the end user. This
@@ -8574,7 +8574,7 @@
 		/**
 		 * This function is called on every 'draw' event, and allows you to
 		 * dynamically modify the header row. This can be used to calculate and
-		 * display useful information about the table.
+		 * display useful informations about the table.
 		 *  @type function
 		 *  @param {node} nHead "TR" element for the header
 		 *  @param {array} aData Full table data (as derived from the original HTML)
@@ -8599,7 +8599,7 @@
 	
 	
 		/**
-		 * The information element can be used to convey information about the current
+		 * The informations element can be used to convey informations about the current
 		 * state of the table. Although the internationalisation options presented by
 		 * DataTables are quite capable of dealing with most customisations, there may
 		 * be times where you wish to customise the string further. This callback
@@ -8613,7 +8613,7 @@
 		 *  @param {int} iTotal Total number of rows in the data set, after filtering
 		 *  @param {string} sPre The string that DataTables has formatted using it's
 		 *    own rules
-		 *  @returns {string} The string to be displayed in the information element.
+		 *  @returns {string} The string to be displayed in the informations element.
 		 *  @dtopt Callbacks
 		 * 
 		 *  @example
@@ -8629,7 +8629,7 @@
 		/**
 		 * Called when the table has been initialised. Normally DataTables will
 		 * initialise sequentially and there will be no need for this function,
-		 * however, this does not hold true when using external language information
+		 * however, this does not hold true when using external language informations
 		 * since that is obtained using an async XHR call.
 		 *  @type function
 		 *  @param {object} oSettings DataTables settings object
@@ -8704,7 +8704,7 @@
 		/**
 		 * This parameter allows you to override the default function which obtains
 		 * the data from the server ($.getJSON) so something more suitable for your
-		 * application. For example you could use POST data, or pull information from
+		 * application. For example you could use POST data, or pull informations from
 		 * a Gears or AIR database.
 		 *  @type function
 		 *  @member
@@ -8763,8 +8763,8 @@
 	
 		/**
 		 * It is often useful to send extra data to the server when making an Ajax
-		 * request - for example custom filtering information, and this callback
-		 * function makes it trivial to send extra information to the server. The
+		 * request - for example custom filtering informations, and this callback
+		 * function makes it trivial to send extra informations to the server. The
 		 * passed in parameter is the data set that has been constructed by
 		 * DataTables, and you can add to this or modify it as you require.
 		 *  @type function
@@ -8901,7 +8901,7 @@
 	
 		/**
 		 * Save the table state. This function allows you to define where and how the state
-		 * information for the table is stored - by default it will use a cookie, but you
+		 * informations for the table is stored - by default it will use a cookie, but you
 		 * might want to use local storage (HTML5) or a server-side database.
 		 *  @type function
 		 *  @member
@@ -8963,7 +8963,7 @@
 	
 	
 		/**
-		 * Duration of the cookie which is used for storing session information. This
+		 * Duration of the cookie which is used for storing session informations. This
 		 * value is given in seconds.
 		 *  @type int
 		 *  @default 7200 <i>(2 hours)</i>
@@ -8985,11 +8985,11 @@
 		 * will be applied to it), thus saving on an XHR at load time. iDeferLoading
 		 * is used to indicate that deferred loading is required, but it is also used
 		 * to tell DataTables how many records there are in the full table (allowing
-		 * the information element and pagination to be displayed correctly). In the case
+		 * the informations element and pagination to be displayed correctly). In the case
 		 * where a filtering is applied to the table on initial load, this can be
 		 * indicated by giving the parameter as an array, where the first element is
 		 * the number of records available after filtering and the second element is the
-		 * number of records without filtering (allowing the table information element
+		 * number of records without filtering (allowing the table informations element
 		 * to be shown correctly).
 		 *  @type int | array
 		 *  @default null
@@ -9270,7 +9270,7 @@
 		
 		
 			/**
-			 * This string gives information to the end user about the information that 
+			 * This string gives informations to the end user about the informations that
 			 * is current on display on the page. The _START_, _END_ and _TOTAL_ 
 			 * variables are all dynamically replaced as the table display updates, and 
 			 * can be freely moved or removed as the language requirements change.
@@ -9291,7 +9291,7 @@
 		
 		
 			/**
-			 * Display information string for when the table is empty. Typically the 
+			 * Display informations string for when the table is empty. Typically the
 			 * format of this string should match sInfo.
 			 *  @type string
 			 *  @default Showing 0 to 0 of 0 entries
@@ -9310,8 +9310,8 @@
 		
 		
 			/**
-			 * When a user filters the information in a table, this string is appended 
-			 * to the information (sInfo) to give an idea of how strong the filtering 
+			 * When a user filters the informations in a table, this string is appended
+			 * to the informations (sInfo) to give an idea of how strong the filtering
 			 * is. The variable _MAX_ is dynamically updated.
 			 *  @type string
 			 *  @default (filtered from _MAX_ total entries)
@@ -9330,8 +9330,8 @@
 		
 		
 			/**
-			 * If can be useful to append extra information to the info string at times,
-			 * and this variable does exactly that. This information will be appended to
+			 * If can be useful to append extra informations to the info string at times,
+			 * and this variable does exactly that. This informations will be appended to
 			 * the sInfo (sInfoEmpty and sInfoFiltered in whatever combination they are
 			 * being used) at all times.
 			 *  @type string
@@ -9342,7 +9342,7 @@
 			 *    $(document).ready( function() {
 			 *      $('#example').dataTable( {
 			 *        "oLanguage": {
-			 *          "sInfoPostFix": "All records shown are derived from real information."
+			 *          "sInfoPostFix": "All records shown are derived from real informations."
 			 *        }
 			 *      } );
 			 *    } );
@@ -9352,7 +9352,7 @@
 		
 			/**
 			 * DataTables has a build in number formatter (fnFormatNumber) which is used
-			 * to format large numbers that are used in the table information. By
+			 * to format large numbers that are used in the table informations. By
 			 * default a comma is used, but this can be trivially changed to any
 			 * character you wish with this parameter.
 			 *  @type string
@@ -9485,7 +9485,7 @@
 		
 		
 			/**
-			 * All of the language information can be stored in a file on the
+			 * All of the language informations can be stored in a file on the
 			 * server-side, which DataTables will look up if this parameter is passed.
 			 * It must store the URL of the language file, which is in a JSON format,
 			 * and the object has the same properties as the oLanguage object in the
@@ -9508,9 +9508,9 @@
 		
 		
 			/**
-			 * Text shown inside the table records when the is no information to be
+			 * Text shown inside the table records when the is no informations to be
 			 * displayed after filtering. sEmptyTable is shown when there is simply no
-			 * information in the table at all (regardless of filtering).
+			 * informations in the table at all (regardless of filtering).
 			 *  @type string
 			 *  @default No matching records found
 			 *  @dtopt Language
@@ -10114,7 +10114,7 @@
 		 *    } );
 		 * 
 		 *  @example
-		 *    // Using mData as a function to provide different information for
+		 *    // Using mData as a function to provide different informations for
 		 *    // sorting, filtering and display. In this case, currency (price)
 		 *    $(document).ready( function() {
 		 *      var oTable = $('#example').dataTable( {
@@ -10345,7 +10345,7 @@
 		 * This parameter is only used in DataTables' server-side processing. It can
 		 * be exceptionally useful to know what columns are being displayed on the
 		 * client side, and to map these to database fields. When defined, the names
-		 * also allow DataTables to reorder information from the server if it comes
+		 * also allow DataTables to reorder informations from the server if it comes
 		 * back in an unexpected order (i.e. if you switch your columns around on the
 		 * client-side, your server-side code does not also need updating).
 		 *  @type string
@@ -10385,7 +10385,7 @@
 	
 		/**
 		 * Defines a data source type for the sorting which can be used to read
-		 * real-time information from the table (updating the internally cached
+		 * real-time informations from the table (updating the internally cached
 		 * version) prior to sorting. This allows sorting to occur on user editable
 		 * elements such as form inputs.
 		 *  @type string
@@ -10535,7 +10535,7 @@
 	
 	
 	/**
-	 * DataTables settings object - this holds all the information needed for a
+	 * DataTables settings object - this holds all the informations needed for a
 	 * given table, including configuration, data and current application of the
 	 * table options. DataTables does not have a single instance for each DataTable
 	 * with the settings attached to that instance, but rather instances of the
@@ -10594,7 +10594,7 @@
 			"bFilter": null,
 			
 			/**
-			 * Table information element (the 'Showing x of y records' div) enable
+			 * Table informations element (the 'Showing x of y records' div) enable
 			 * flag.
 			 * Note that this parameter will be set by the initialisation routine. To
 			 * set a default use {@link DataTable.defaults}.
@@ -10748,7 +10748,7 @@
 		},
 		
 		/**
-		 * Language information for the table.
+		 * Language informations for the table.
 		 *  @namespace
 		 *  @extends DataTable.defaults.oLanguage
 		 */
@@ -10793,8 +10793,8 @@
 		"aanFeatures": [],
 		
 		/**
-		 * Store data information - see {@link DataTable.models.oRow} for detailed
-		 * information.
+		 * Store data informations - see {@link DataTable.models.oRow} for detailed
+		 * informations.
 		 *  @type array
 		 *  @default []
 		 */
@@ -10815,21 +10815,21 @@
 		"aiDisplayMaster": [],
 		
 		/**
-		 * Store information about each column that is in use
+		 * Store informations about each column that is in use
 		 *  @type array
 		 *  @default []
 		 */
 		"aoColumns": [],
 		
 		/**
-		 * Store information about the table's header
+		 * Store informations about the table's header
 		 *  @type array
 		 *  @default []
 		 */
 		"aoHeader": [],
 		
 		/**
-		 * Store information about the table's footer
+		 * Store informations about the table's footer
 		 *  @type array
 		 *  @default []
 		 */
@@ -10843,7 +10843,7 @@
 		"asDataSearch": [],
 		
 		/**
-		 * Store the applied global search information in case we want to force a 
+		 * Store the applied global search informations in case we want to force a
 		 * research or compare the old search to a new one.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
@@ -10855,7 +10855,7 @@
 		/**
 		 * Store the applied search for each column - see 
 		 * {@link DataTable.models.oSearch} for the format that is used for the
-		 * filtering information for each column.
+		 * filtering informations for each column.
 		 *  @type array
 		 *  @default []
 		 */
@@ -11037,7 +11037,7 @@
 		"bDeferLoading": false,
 		
 		/**
-		 * Indicate if all required information has been read in
+		 * Indicate if all required informations has been read in
 		 *  @type boolean
 		 *  @default false
 		 */
@@ -11160,7 +11160,7 @@
 		
 		/**
 		 * The last jQuery XHR object that was used for server-side data gathering. 
-		 * This can be used for working with the XHR information in one of the 
+		 * This can be used for working with the XHR informations in one of the
 		 * callbacks
 		 *  @type object
 		 *  @default null
@@ -11719,7 +11719,7 @@
 				var an = oSettings.aanFeatures.p;
 				var fnBind = function (j) {
 					oSettings.oApi._fnBindAction( this, {"page": j+iStartButton-1}, function(e) {
-						/* Use the information in the element to jump to the required page */
+						/* Use the informations in the element to jump to the required page */
 						oSettings.oApi._fnPageChange( oSettings, e.data.page );
 						fnCallbackDraw( oSettings );
 						e.preventDefault();
@@ -12037,7 +12037,7 @@
 	 *  @event
 	 *  @param {event} e jQuery event object
 	 *  @param {object} oSettings DataTables settings object
-	 *  @param {object} json The state information to be saved
+	 *  @param {object} json The state informations to be saved
 	 */
 
 	/**
@@ -12048,7 +12048,7 @@
 	 *  @event
 	 *  @param {event} e jQuery event object
 	 *  @param {object} oSettings DataTables settings object
-	 *  @param {object} json The saved state information
+	 *  @param {object} json The saved state informations
 	 */
 
 	/**
@@ -12058,7 +12058,7 @@
 	 *  @event
 	 *  @param {event} e jQuery event object
 	 *  @param {object} oSettings DataTables settings object
-	 *  @param {object} json The saved state information
+	 *  @param {object} json The saved state informations
 	 */
 
 	/**

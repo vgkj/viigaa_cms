@@ -1,5 +1,4 @@
 ViigaaCms::Application.routes.draw do
-  resources :users
 
   captcha_route
   get "static_pages/login"
@@ -9,7 +8,11 @@ ViigaaCms::Application.routes.draw do
 
   match '/findManager' ,:to=> 'managers#find_manager',via:'post'
   match '/updateManager' ,:to=> 'managers#update_manager',via:'post'
-  #match ':controller(/:action(/:id))', :via => [:get, :post, :patch, :put, :delete]
+
+  get "users/getOneUser"
+  post "users/updateOneUser"
+  patch "users/deleteOneUser"
+  resources :users  #match ':controller(/:action(/:id))', :via => [:get, :post, :patch, :put, :delete]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -5,7 +5,7 @@ $.extend( true, $.fn.dataTable.defaults, {
 		"t"+
 		"<'row'<'col-xs-6'i><'col-xs-6'p>>",
 	"oLanguage": {
-		"sLengthMenu": "_MENU_ records per page"
+		"sLengthMenu": "_MENU_ 条/页"
 	}
 } );
 
@@ -117,7 +117,7 @@ else {
 	// Integration for 1.9-
 	$.fn.dataTable.defaults.sPaginationType = 'bootstrap';
 
-	/* API method to get paging information */
+	/* API method to get paging informations */
 	$.fn.dataTableExt.oApi.fnPagingInfo = function ( oSettings )
 	{
 		return {

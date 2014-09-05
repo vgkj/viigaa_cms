@@ -1,0 +1,147 @@
+a:hover {
+	text-decoration: none;
+}
+a:focus {
+	text-decoration: none;
+}
+.navbar {
+	border-radius: 0;
+	background: #3c8dbc;
+	border: 0px;
+	margin-bottom: 0px;
+}
+.navbar-header {
+	background: #367fa9;
+	height: 50px;
+}
+.navbar-header img {
+	margin-right: 20px;
+	padding: 8px 8px 0 12px;
+}
+.dropdown-toggle {
+	color: #fff;
+}
+.dropdown {
+	list-style-type: none;
+	padding-right: 30px;
+	padding-top: 19px;
+	height: 50px;
+}
+.dropdown-toggle {
+	padding: 20px 20px 13px;
+}
+.dropdown-toggle:hover {
+	color: #fff;
+	background-color: #367fa9;
+}
+.dropdown-toggle:focus {
+	color: #fff;
+}
+.dropdown-menu {
+	margin: 0 30px;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+	border-radius: 0;
+	width: 280px;
+	border: 0px;
+	padding: 2px 0;
+}
+.v-glyphicon img{ margin-top:-8px;}
+.v-menu{margin-left: -154px;}
+.dropdown-menu:after {
+	border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #ffffff;
+	border-style: solid;
+	border-width: 10px;
+	bottom: 100%;
+	content: " ";
+	height: 0;
+	position: absolute;
+    right: 48px;
+}
+.user-header {
+	background: none repeat scroll 0 0 #3c8dbc;
+	height: 175px;
+	padding: 10px;
+	text-align: center;
+}
+.bg-light-blue {
+	background-color: #3c8dbc !important;
+}
+.user-header > img {
+	border: 8px solid rgba(255, 255, 255, 0.2);
+	height: 90px;
+	width: 90px;
+	z-index: 5;
+}
+.img-circle {
+	border-radius: 50%;
+}
+.user-header > p {
+	color: #fff;
+	font-size: 17px;
+	margin-top: 10px;
+	text-shadow: 2px 2px 3px #333333;
+	z-index: 5;
+}
+.user-header > p > small {
+	display: block;
+	font-size: 12px;
+}
+.user-footer {
+	padding: 10px 10px 55px;
+}
+.btn.btn-flat {
+	border-radius: 0;
+	border-width: 1px;
+	box-shadow: none;
+}
+.btn:hover {
+	background: #3c8dbc;
+	color: #fff;
+	text-shadow: none;
+}
+.pull {
+	float: left;
+	text-align: center;
+	width: 33%;
+}
+.left-side {
+	width: 220px;
+	background: none repeat scroll 0 0 #f4f4f4;
+	box-shadow: -3px 0 8px -4px rgba(0, 0, 0, 0.07) inset;
+	float: left;
+	padding-bottom: 8px;
+}
+.user-panel {
+	padding: 10px;
+	height: 60px;
+}
+.user-panel > .image > img {
+	height: 45px;
+	width: 45px;
+}
+.user-panel > .info {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1;
+	padding: 5px 5px 5px 15px;
+}
+.pull-left p {
+	margin: 10px 0;
+}
+.panel-group .panel {
+	border-radius: 0;
+	box-shadow: none;
+}
+.panel-heading {
+	padding: 12px 15px;
+}
+.panel-body {
+	padding: 9px 15px;
+}
+.panel-body p {
+	border-bottom: 1px solid #eee;
+	width: 100%;
+}
+.modal-dialog {
+    margin: 150px auto;
+}

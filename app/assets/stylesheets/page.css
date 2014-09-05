@@ -1,0 +1,31 @@
+.v-form-group{
+	margin-left: 28px;
+	width: 42%;
+	float: left;
+}
+.btn-danger {
+	margin-right: 35px;
+}
+.modal-footer .btn + .btn {
+	margin-left: 390px;
+}
+.v-body {
+	height: 313px;
+}
+.bootstrap-datetimepicker-widget > ul {
+	padding: 0;
+}
+.v-add-on {
+	float: right;
+	height: 34px;
+	width: 17%;
+	background: url(/assets/date.png) no-repeat center;
+	background-color: #efefef;
+	font-size: 0;
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	margin-left: -6px;
+}

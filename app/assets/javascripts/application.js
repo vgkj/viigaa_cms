@@ -17,4 +17,5 @@
 //= require jquery.dataTables
 //= require dataTables.bootstrap
 //= require app
+//= require demo
 //= require_tree .

@@ -1,4 +1,84 @@
+<aside class="right-side">
 <p id="notice"><%= notice %></p>
+<p>
+  <strong>Account:</strong>
+  <%= @user.account %>
+</p>
+<p>
+  <strong>Password digest:</strong>
+  <%= @user.password_digest %>
+</p>
+
+<p>
+  <strong>qq:</strong>
+  <%= @user.qq %>
+</p>
+
+<p>
+  <strong>Weixin:</strong>
+  <%= @user.weixin %>
+</p>
+
+<p>
+  <strong>Weiblog:</strong>
+  <%= @user.weiblog %>
+</p>
+
+<p>
+  <strong>Renren:</strong>
+  <%= @user.renren %>
+</p>
+
+<p>
+  <strong>Flow:</strong>
+  <%= @user.flow %>
+</p>
+
+<p>
+  <strong>Integral:</strong>
+  <%= @user.integral %>
+</p>
+
+<p>
+  <strong>Errortime:</strong>
+  <%= @user.errorTime %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @user.nickname %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @user.gender %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @user.birthday %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user.age %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @user.photo %>
+</p>
+
+<p>
+  <strong>Signature,:</strong>
+  <%= @user.signature %>
+</p>
+
+<p>
+  <strong>Login at:</strong>
+  <%= @user.login_at %>
+</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+</aside>

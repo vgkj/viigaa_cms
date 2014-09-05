@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
@@ -7,8 +7,7 @@ gem 'rails', '4.0.4'
 gem 'mysql2'
 
 gem 'bcrypt-ruby'
-
-gem 'bootstrap-sass', '3.2.0.1'
+gem 'twitter-bootstrap-rails', '~> 2.2.8'
 
 gem 'uuidtools'
 
@@ -16,9 +15,13 @@ gem 'uuidtools'
 gem 'carrierwave'
 gem 'mini_magick'
 
+#国际化
+gem 'rails-i18n', '~> 4.0.1'
+gem 'will-paginate-i18n', '~> 0.1.15'
+
 #分页
-gem 'will_paginate', '3.0.4'
-gem 'bootstrap-will_paginate', '0.0.9'
+gem 'will_paginate', '~> 3.0.7'
+gem 'will_paginate-bootstrap', '~> 1.0.1'
 
 ##验证码gem
 gem 'easy_captcha', '~> 0.6.4'
