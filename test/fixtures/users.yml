@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  userid: MyString
+  account: MyString
+  password_digest: MyString
+  qq: MyString
+  weixin: MyString
+  weiblog: MyString
+  renren: MyString
+  flow: 1
+  integral: 1
+  errorTime: 1
+  nickname: MyString
+  gender: MyString
+  birthday: 2014-09-01 12:31:10
+  age: 1
+  photo: MyString
+  signature,: MyString
+  login_at: 2014-09-01 12:31:10
+
+two:
+  userid: MyString
+  account: MyString
+  password_digest: MyString
+  qq: MyString
+  weixin: MyString
+  weiblog: MyString
+  renren: MyString
+  flow: 1
+  integral: 1
+  errorTime: 1
+  nickname: MyString
+  gender: MyString
+  birthday: 2014-09-01 12:31:10
+  age: 1
+  photo: MyString
+  signature,: MyString
+  login_at: 2014-09-01 12:31:10

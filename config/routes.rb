@@ -1,4 +1,11 @@
 ViigaaCms::Application.routes.draw do
+  get "users/getOneUser"
+  post "users/updateOneUser"
+  patch "users/deleteOneUser"
+  resources :users
+  resources :information
+  #match ':controller(/:action(/:id))', :via => [:get, :post, :patch, :put, :delete]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
